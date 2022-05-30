@@ -4,6 +4,7 @@
         "body": "#!/usr/bin/zsh\n",
         "description": "executer"
     },
+
     "echo":{
         "prefix": "echo",
         "body": "echo \"${0:massage}\"",
@@ -24,11 +25,6 @@
         "body": "else\n\t${0}",
         "description": "else"
     },
-    "test_string_empty" : {
-        "prefix": "test_string_empty",
-        "body": "if [[ ${1:condition} == \"\" ]]; then\n\t${0}\nfi",
-        "description": "test string empty"
-    },
     "for_in" : {
         "prefix": "for_in",
         "body": "for ${0:VAR} in $${1:LIST}; do\n\techo ${0:VAR}\ndone\n",
@@ -43,6 +39,81 @@
         "prefix": "case",
         "body": "case \"${1:VAR}\" in \n\t*) \n\t\t _t4dDebugLog  \\$perror \"Empty or Unknown argument\" \n\t\treturn \\$_t4dErrorCode\n\t;;\nesac\n",
         "description": "switch case"
-    }
+    },
+
+    "test_string_empty" : {
+        "prefix": "test_string_empty",
+        "body": "if [[ ${1:condition} == \"\" ]]; then\n\t${0}\nfi",
+        "description": "test string empty"
+    },
+
+    "function" : {
+        "prefix": "function",
+        "body" :[
+                "${1:name}(){",
+                "# Generated From \\$Tools4Dev_PATH/Engine/G4d/templates-project.env",
+                "# v1.8.0",
+                "###### ${1:name}",
+                "#   - Name:",
+                "#       ${1:name}",
+                "###",
+                "#   - Synopsis:",
+                "#       ${2:description}",
+                "###",
+                "#   - Example:",
+                "#       * {Example1}              = {One-Line Description}",
+                "#",
+                "###",
+                "#   - Note:",
+                "#       <Required>",
+                "#       [Optionnal]",
+                "#       {XXXXXXX}       = Value To Be Changed, if {URL} then replace {URL} with a valid URL",
+                "###",
+                "###### DOCUMENTATION BLOC #####",
+                "########### CODE BLOC #########",
+                "    local _t4dErrorCode=1\n",
+                "    ${0}",
+                "###############################",
+                "}"
+            ],
+        "description": "t4d function generator"
+    },
+    "docOption" : {
+        "prefix": "docOption",
+        "body" :[
+                "#   - Option:",
+                "#       ${1}",
+                "###"
+            ],
+        "description": "t4d function generator"
+    },
+    "docUsage" : {
+        "prefix": "docUsage",
+        "body" :[
+                "#   - Usage:",
+                "#      * {Name} <option>  [arguments]        = {One-Line Description}",
+                "###"
+            ],
+        "description": "t4d function generator"
+    },
+    "docDefinition" : {
+        "prefix": "docDefinition",
+        "body" :[
+            "#   - Definition:",
+            "#       {Text}",
+            "#       {Text}",
+            "#",
+            "#       § Part1",
+            "#           1. List",
+            "#           2. List",
+            "#           3. List",
+            "#",
+            "#       § Part2",
+            "#           1. List",
+            "#",
+            "###"   
+            ],
+        "description": "t4d function generator"
+    },
 }
 
