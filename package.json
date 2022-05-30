@@ -1,0 +1,30 @@
+{
+	"name": "shell-auto-completion-t4d",
+	"displayName": "auto-completion shell",
+	"description": "auto-completion shell script for t4d",
+	"version": "0.1.0",
+	"publisher": "vincentc-afk",
+	"icon": "https://raw.githubusercontent.com/T4D-Suites/T4D-Ressources/master/Logo.png",
+	"engines": {
+		"vscode": "^1.9.1"
+	},
+	"galleryBanner": {
+		"color": "#1E81C1",
+		"theme": "light"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "shellscript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/builtins.json"
+			}
+		]
+	}
+}

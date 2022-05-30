@@ -1,0 +1,322 @@
+{
+    "HOME": {
+        "prefix": "HOME",
+        "body": "HOME",
+        "description": "The current user's home directory; the default for the cd built-in. The value of this variable is also used by tilde expansion."
+    },
+    "PATH": {
+        "prefix": "PATH",
+        "body": "PATH",
+        "description": "A colon-separated list of directories in which the shell looks for commands."
+    },
+    "HOSTFILE": {
+        "prefix": "HOSTFILE",
+        "body": "HOSTFILE",
+        "description": "Contains the name of a file in the same format as /etc/hosts that should be read when the shell needs to complete a hostname."
+    },
+    "HOSTNAME": {
+        "prefix": "HOSTNAME",
+        "body": "HOSTNAME",
+        "description": "The name of the current host."
+    },
+    "PWD": {
+        "prefix": "PWD",
+        "body": "PWD",
+        "description": "The current working directory as set by the cd built-in command."
+    },
+    "RANDOM": {
+        "prefix": "RANDOM",
+        "body": "RANDOM",
+        "description": "Each time this parameter is referenced, a random integer between 0 and 32767 is generated. Assigning a value to this variable seeds the random number generator."
+    },
+    "REPLY": {
+        "prefix": "REPLY",
+        "body": "REPLY",
+        "description": "The default variable for the read built-in."
+    },
+    "SECONDS": {
+        "prefix": "SECONDS",
+        "body": "SECONDS",
+        "description": "This variable expands to the number of seconds since the shell was started."
+    },
+    "UID": {
+        "prefix": "UID",
+        "body": "UID",
+        "description": "The numeric, real user ID of the current user."
+    },
+    "alias": {
+        "prefix": "alias",
+        "body": "alias",
+        "description": "Shell builtin function 'alias'"
+    },
+    "bg": {
+        "prefix": "bg",
+        "body": "bg",
+        "description": "Shell builtin function 'bg'"
+    },
+    "bind": {
+        "prefix": "bind",
+        "body": "bind",
+        "description": "Shell builtin function 'bind'"
+    },
+    "break": {
+        "prefix": "break",
+        "body": "break",
+        "description": "Shell builtin function 'break'"
+    },
+    "builtin": {
+        "prefix": "builtin",
+        "body": "builtin",
+        "description": "Shell builtin function 'builtin'"
+    },
+    "caller": {
+        "prefix": "caller",
+        "body": "caller",
+        "description": "Shell builtin function 'caller'"
+    },
+    "cd": {
+        "prefix": "cd",
+        "body": "cd",
+        "description": "Shell builtin function 'cd'"
+    },
+    "command": {
+        "prefix": "command",
+        "body": "command",
+        "description": "Shell builtin function 'command'"
+    },
+    "compgen": {
+        "prefix": "compgen",
+        "body": "compgen",
+        "description": "Shell builtin function 'compgen'"
+    },
+    "complete": {
+        "prefix": "complete",
+        "body": "complete",
+        "description": "Shell builtin function 'complete'"
+    },
+    "continue": {
+        "prefix": "continue",
+        "body": "continue",
+        "description": "Shell builtin function 'continue'"
+    },
+    "declare": {
+        "prefix": "declare",
+        "body": "declare",
+        "description": "Shell builtin function 'declare'"
+    },
+    "dirs": {
+        "prefix": "dirs",
+        "body": "dirs",
+        "description": "Shell builtin function 'dirs'"
+    },
+    "disown": {
+        "prefix": "disown",
+        "body": "disown",
+        "description": "Shell builtin function 'disown'"
+    },
+    "echo": {
+        "prefix": "echo",
+        "body": "echo",
+        "description": "Shell builtin function 'echo'"
+    },
+    "enable": {
+        "prefix": "enable",
+        "body": "enable",
+        "description": "Shell builtin function 'enable'"
+    },
+    "eval": {
+        "prefix": "eval",
+        "body": "eval",
+        "description": "Shell builtin function 'eval'"
+    },
+    "exec": {
+        "prefix": "exec",
+        "body": "exec",
+        "description": "Shell builtin function 'exec'"
+    },
+    "exit": {
+        "prefix": "exit",
+        "body": "exit",
+        "description": "Shell builtin function 'exit'"
+    },
+    "export": {
+        "prefix": "export",
+        "body": "export",
+        "description": "Shell builtin function 'export'"
+    },
+    "false": {
+        "prefix": "false",
+        "body": "false",
+        "description": "Shell builtin function 'false'"
+    },
+    "fc": {
+        "prefix": "fc",
+        "body": "fc",
+        "description": "Shell builtin function 'fc'"
+    },
+    "fg": {
+        "prefix": "fg",
+        "body": "fg",
+        "description": "Shell builtin function 'fg'"
+    },
+    "getopts": {
+        "prefix": "getopts",
+        "body": "getopts",
+        "description": "Shell builtin function 'getopts'"
+    },
+    "hash": {
+        "prefix": "hash",
+        "body": "hash",
+        "description": "Shell builtin function 'hash'"
+    },
+    "help": {
+        "prefix": "help",
+        "body": "help",
+        "description": "Shell builtin function 'help'"
+    },
+    "history": {
+        "prefix": "history",
+        "body": "history",
+        "description": "Shell builtin function 'history'"
+    },
+    "jobs": {
+        "prefix": "jobs",
+        "body": "jobs",
+        "description": "Shell builtin function 'jobs'"
+    },
+    "kill": {
+        "prefix": "kill",
+        "body": "kill",
+        "description": "Shell builtin function 'kill'"
+    },
+    "let": {
+        "prefix": "let",
+        "body": "let",
+        "description": "Shell builtin function 'let'"
+    },
+    "local": {
+        "prefix": "local",
+        "body": "local",
+        "description": "Shell builtin function 'local'"
+    },
+    "logout": {
+        "prefix": "logout",
+        "body": "logout",
+        "description": "Shell builtin function 'logout'"
+    },
+    "popd": {
+        "prefix": "popd",
+        "body": "popd",
+        "description": "Shell builtin function 'popd'"
+    },
+    "printf": {
+        "prefix": "printf",
+        "body": "printf",
+        "description": "Shell builtin function 'printf'"
+    },
+    "pushd": {
+        "prefix": "pushd",
+        "body": "pushd",
+        "description": "Shell builtin function 'pushd'"
+    },
+    "pwd": {
+        "prefix": "pwd",
+        "body": "pwd",
+        "description": "Shell builtin function 'pwd'"
+    },
+    "read": {
+        "prefix": "read",
+        "body": "read",
+        "description": "Shell builtin function 'read'"
+    },
+    "readonly": {
+        "prefix": "readonly",
+        "body": "readonly",
+        "description": "Shell builtin function 'readonly'"
+    },
+    "return": {
+        "prefix": "return",
+        "body": "return",
+        "description": "Shell builtin function 'return'"
+    },
+    "set": {
+        "prefix": "set",
+        "body": "set",
+        "description": "Shell builtin function 'set'"
+    },
+    "shift": {
+        "prefix": "shift",
+        "body": "shift",
+        "description": "Shell builtin function 'shift'"
+    },
+    "shopt": {
+        "prefix": "shopt",
+        "body": "shopt",
+        "description": "Shell builtin function 'shopt'"
+    },
+    "source": {
+        "prefix": "source",
+        "body": "source",
+        "description": "Shell builtin function 'source'"
+    },
+    "suspend": {
+        "prefix": "suspend",
+        "body": "suspend",
+        "description": "Shell builtin function 'suspend'"
+    },
+    "test": {
+        "prefix": "test",
+        "body": "test",
+        "description": "Shell builtin function 'test'"
+    },
+    "times": {
+        "prefix": "times",
+        "body": "times",
+        "description": "Shell builtin function 'times'"
+    },
+    "trap": {
+        "prefix": "trap",
+        "body": "trap",
+        "description": "Shell builtin function 'trap'"
+    },
+    "true": {
+        "prefix": "true",
+        "body": "true",
+        "description": "Shell builtin function 'true'"
+    },
+    "type": {
+        "prefix": "type",
+        "body": "type",
+        "description": "Shell builtin function 'type'"
+    },
+    "typeset": {
+        "prefix": "typeset",
+        "body": "typeset",
+        "description": "Shell builtin function 'typeset'"
+    },
+    "ulimit": {
+        "prefix": "ulimit",
+        "body": "ulimit",
+        "description": "Shell builtin function 'ulimit'"
+    },
+    "umask": {
+        "prefix": "umask",
+        "body": "umask",
+        "description": "Shell builtin function 'umask'"
+    },
+    "unalias": {
+        "prefix": "unalias",
+        "body": "unalias",
+        "description": "Shell builtin function 'unalias'"
+    },
+    "unset": {
+        "prefix": "unset",
+        "body": "unset",
+        "description": "Shell builtin function 'unset'"
+    },
+    "wait": {
+        "prefix": "wait",
+        "body": "wait",
+        "description": "Shell builtin function 'wait'"
+    }
+}
