@@ -4,20 +4,24 @@
         "body": "#!/usr/bin/zsh\n",
         "description": "executer"
     },
-
     "echo":{
         "prefix": "echo",
         "body": "echo \"${0:massage}\"",
         "description": "echo message"
     },
+    "_t4dDebugLog" : {
+        "prefix": "_t4dDebugLog",
+        "body": "_t4dDebugLog \"$plog\" \"${1:message}\" ",
+        "description": "T4D Debug log"
+    },
     "if" : {
         "prefix": "if",
-        "body": "if [[ ${1:condition} ]]; then\n\t${0}\nfi",
+        "body": "if [[ \"${1:condition}\" == \"\" ]]; then\n\t${0}\nfi",
         "description": "if"
     },
     "elseif" : {
         "prefix": "elseif",
-        "body": "elif [[ ${1:condition} ]]; then\n\t${0}",
+        "body": "elif [[ \"${1:condition}\" ]]; then\n\t${0}",
         "description": "elseif"
     },
     "else" : {
@@ -40,15 +44,8 @@
         "body": "case \"${1:VAR}\" in \n\t*) \n\t\t _t4dDebugLog  \\$perror \"Empty or Unknown argument\" \n\t\treturn \\$_t4dErrorCode\n\t;;\nesac\n",
         "description": "switch case"
     },
-
-    "test_string_empty" : {
-        "prefix": "test_string_empty",
-        "body": "if [[ ${1:condition} == \"\" ]]; then\n\t${0}\nfi",
-        "description": "test string empty"
-    },
-
-    "function" : {
-        "prefix": "function",
+    "chf" : {
+        "prefix": "chf",
         "body" :[
                 "${1:name}(){",
                 "# Generated From \\$Tools4Dev_PATH/Engine/G4d/templates-project.env",
@@ -61,7 +58,7 @@
                 "#       ${2:description}",
                 "###",
                 "#   - Example:",
-                "#       * {Example1}              = {One-Line Description}",
+                "#       * {Example1}",
                 "#",
                 "###",
                 "#   - Note:",
@@ -114,6 +111,6 @@
             "###"   
             ],
         "description": "t4d function generator"
-    },
+    }
 }
 

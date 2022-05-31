@@ -6,6 +6,8 @@ This extension adds shell-style t4d auto-completion to VSCode.
 
 ## Basic code
 
+- chf
+- log
 - if/elif/else
 - echo/read
 - for/while
