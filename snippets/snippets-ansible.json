@@ -1,19 +1,45 @@
 {
     "ansible":{
         "prefix": "ansible",
-        "body": "---\n- hosts: \"{{ myhosts }}\"\nbecome: true\ngather_facts: true",
+        "body": "---\n- hosts: \"{{ myhosts }}\"\n  become: true\n  gather_facts: true",
         "description": "executer"
     },
     "package":{
         "prefix": "package",
-        "body": "- name: ${1}\n package: name={0} state=present",
+        "body": "- name: ${1}\n  package: name=${0} state=present",
         "description": "package block"
     },
-    "mv":{
-        "prefix": "**",
-        "body": "**",
-        "description": "package block"
-    }
-    
+    "systemd":{
+        "prefix":"systemd",
+        "body":"- name: ${1}\n  systemd:\n    name:${2}\n    state:${0}",
+        "description":"manage service"
+    },
+    "copy":{
+        "prefix":"copy",
+        "body":"- name: ${1}\n  copy:\n    src: ${2}\n    dest: ${3}\n    ower: root\n    group: root\n    mode: '0644'",
+        "description": "copy file from a src to a dest"
+    },
+    "debug":{
+        "prefix":"debug",
+        "body":"- name: ${1}\n  debug:\n    var: ${2}\n    register: ${0}",
+        "description": "check variable"
+    },
+    "file":{
+        "prefix": "file",
+        "body": "- name: ${1}\n  file:\n    path: ${2}\n    owner: root${3}\n    group: root${4}\n    mode: '0644${0}'",
+        "description": "create a file"
+    },
+    "fileinfile":{
+        "prefix": "lineinfile",
+        "body":"- name: ${1}\n  lineinfile:\n   path: ${2}\n   regexp: '^SELINUX='${3}\n   line: ${4}\n   create: yes${5}",
+        "description": "add line in a file if doesn't exist ans create the file if doesn't exit"
+    },
+    "command":{
+        "prefix": "command",
+        "body": "- name: ${1}\n   command: ${2}",
+        "description": "execute a command in bash"
+    },
+
+
 }
 
