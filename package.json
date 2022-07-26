@@ -19,11 +19,25 @@
 		"snippets": [
 			{
 				"language": "shellscript",
-				"path": "./snippets/snippets.json"
+				"path": "./snippets/snippets-shell.json"
 			},
 			{
 				"language": "shellscript",
-				"path": "./snippets/builtins.json"
+				"path": "./snippets/private.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/public.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/builtins-shell.json"
+			},
+
+
+			{
+				"language": "yaml",
+				"path": "./snippets/snippets-ansible.json"
 			}
 		]
 	}

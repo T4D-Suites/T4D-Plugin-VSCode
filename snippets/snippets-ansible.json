@@ -1,0 +1,14 @@
+{
+    "ansible":{
+        "prefix": "ansible",
+        "body": "---\n- hosts: \"{{ myhosts }}\"\nbecome: true\ngather_facts: true",
+        "description": "executer"
+    },
+    "package":{
+        "prefix": "package",
+        "body": "- name: ${1}\n package: name={0} state=present",
+        "description": "package block"
+    }
+    
+}
+
