@@ -8,6 +8,11 @@
         "prefix": "package",
         "body": "- name: ${1}\n package: name={0} state=present",
         "description": "package block"
+    },
+    "mv":{
+        "prefix": "**",
+        "body": "**",
+        "description": "package block"
     }
     
 }
