@@ -1,0 +1,12 @@
+{
+    "HOME": {
+        "prefix": "HOME",
+        "body": "HOME",
+        "description": "The current user's home directory; the default for the cd built-in. The value of this variable is also used by tilde expansion."
+    },
+    "ITEMS": {
+        "prefix": "ITEMS",
+        "body": "ITEMS",
+        "description": "ITEMS"
+    }
+}

@@ -38,6 +38,10 @@
 			{
 				"language": "yaml",
 				"path": "./snippets/snippets-ansible.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./snippets/builtins-ansible.json"
 			}
 		]
 	}
