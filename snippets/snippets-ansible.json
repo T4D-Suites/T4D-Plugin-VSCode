@@ -1,12 +1,12 @@
 {
     "ansible":{
-        "prefix": "ansible",
-        "body": "---\n- hosts: \"{{ myhosts }}\"\n  become: true\n  gather_facts: true",
-        "description": "executer"
+        "prefix":"ansible",
+        "body":"---\n- name:${1}\n  hosts: \"{{ myhosts }}\"\n  become: true\n  gather_facts: true",
+        "description":"executer"
     },
     "package":{
-        "prefix": "package",
-        "body": "- name: ${1}\n  package: name=${0} state=present",
+        "prefix":"package",
+        "body":"- name: ${1}\n  package: name=${0} state=present",
         "description": "package block"
     },
     "systemd":{
@@ -17,29 +17,50 @@
     "copy":{
         "prefix":"copy",
         "body":"- name: ${1}\n  copy:\n    src: ${2}\n    dest: ${3}\n    ower: root\n    group: root\n    mode: '0644'",
-        "description": "copy file from a src to a dest"
+        "description":"copy file from a src to a dest"
     },
     "debug":{
         "prefix":"debug",
         "body":"- name: ${1}\n  debug:\n    var: ${2}\n    register: ${0}",
-        "description": "check variable"
+        "description":"check variable"
     },
     "file":{
-        "prefix": "file",
-        "body": "- name: ${1}\n  file:\n    path: ${2}\n    owner: root${3}\n    group: root${4}\n    mode: '0644${0}'",
-        "description": "create a file"
+        "prefix":"file",
+        "body":"- name: ${1}\n  file:\n    path: ${2}\n    owner: root${3}\n    group: root${4}\n    mode: '0644${0}'",
+        "description":"create a file"
     },
     "fileinfile":{
-        "prefix": "lineinfile",
+        "prefix":"lineinfile",
         "body":"- name: ${1}\n  lineinfile:\n   path: ${2}\n   regexp: '^SELINUX='${3}\n   line: ${4}\n   create: yes${5}",
-        "description": "add line in a file if doesn't exist ans create the file if doesn't exit"
+        "description":"add line in a file if doesn't exist ans create the file if doesn't exit"
     },
     "command":{
-        "prefix": "command",
-        "body": "- name: ${1}\n   command: ${2}",
-        "description": "execute a command in bash"
+        "prefix":"command",
+        "body":"- name: ${1}\n   command: ${2}",
+        "description":"execute a command in bash/shell"
     },
-
-
+    "stat":{
+        "prefix":"stat",
+        "body":"- name: ${1}\n  stat:\n    path: ${2}\n  register: ${3}",
+        "description":"check something"
+    },
+    "template":{
+        "prefix":"template",
+        "body":"- name: ${1}\n  template:\n      src: ${2}\n    dest: ${3}",
+        "description":"importe template in a file"
+    },
+    "shell":{
+        "prefix":"shell",
+        "body":"- name: ${1}\n   command: ${2}",
+        "description":"execute a command in shell/bash"
+    },
+    "git":{
+        "prefix":"git",
+        "body":"- name: ${1}\n  git:\n   repo:${2}\n   dest: ${3}\n   version: ${3}\n   accept_hostkey: yes\n   force: yes"
+    },
+    "cron":{
+        "prefix":"cron",
+        "body":"- name: ${1}\n  cron:\n    name: ${2}\n    minute: ${3}\n    hour: ${4}\n    day: ${5}\n    month: ${6}\n    job: ${7}\n    user: ${8}"
+    }
 }
 
