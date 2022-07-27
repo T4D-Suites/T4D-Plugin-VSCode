@@ -31,7 +31,7 @@
     },
     "fileinfile":{
         "prefix":"lineinfile",
-        "body":"- name: ${1}\n  lineinfile:\n   path: ${2}\n   regexp: '^SELINUX='${3}\n   line: ${4}\n   create: yes${5}",
+        "body":"- name: ${1}\n  lineinfile:\n   path: ${2}\n   regexp: '^SELINUX='${3}\n   line: ${4}\n   create: ${5|yes,no|}",
         "description":"add line in a file if doesn't exist ans create the file if doesn't exit"
     },
     "command":{
@@ -41,12 +41,12 @@
     },
     "stat":{
         "prefix":"stat",
-        "body":"- name: ${1}\n  stat:\n    path: ${2}\n  register: ${3}",
+        "body":"- name: ${1}\n  stat:\n  path: ${2}\n  register: ${3}",
         "description":"check something"
     },
     "template":{
         "prefix":"template",
-        "body":"- name: ${1}\n  template:\n      src: ${2}\n    dest: ${3}",
+        "body":"- name: ${1}\n  template:\n    src: ${2}\n    dest: ${3}",
         "description":"importe template in a file"
     },
     "shell":{
@@ -56,7 +56,7 @@
     },
     "git":{
         "prefix":"git",
-        "body":"- name: ${1}\n  git:\n   repo:${2}\n   dest: ${3}\n   version: ${3}\n   accept_hostkey: yes\n   force: yes"
+        "body":"- name: ${1}\n  git:\n   repo:${2}\n   dest: ${3}\n   version: ${3}\n   accept_hostkey: ${4|yes,no|}\n   force: ${5|yes,no|}"
     },
     "cron":{
         "prefix":"cron",
