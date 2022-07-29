@@ -1,0 +1,122 @@
+{
+    "HOME": {
+        "prefix": "HOME",
+        "body": "HOME",
+        "description": "The current user's home directory; the default for the cd built-in. The value of this variable is also used by tilde expansion."
+    },
+    "Item": {
+        "prefix": "item",
+        "body": "\"{{ item }}\"",
+        "description": "variables for with_items "
+    },
+    "Become": {
+        "prefix": "become",
+        "body": "become: ${1|true,false|}",
+        "description": "become"
+    },
+    "Become User": {
+        "prefix": "become_user",
+        "body": "become_user: ",
+        "description": "become_user"
+    },
+    "Become method": {
+        "prefix": "become_method",
+        "body": "become_method: ",
+        "description": "become_method"
+    },
+    "Gather Facts": {
+        "prefix": "gather_facts",
+        "body": "gather_facts: ${1|true,false|}",
+        "description": "Default true"
+    },
+    "Host": {
+        "prefix": "hosts",
+        "body": "hosts: ",
+        "description": "hosts"
+    },
+    "Ignore Errors": {
+        "prefix": "ignore_errors",
+        "body": "ignore_errors: ${1|true,false|}",
+        "description": "default true"
+    },
+    "Remote user": {
+        "prefix": "remote_user",
+        "body": "remote_user: ",
+        "description": "use a remote user for the tasks"
+    },
+    "Pre Tasks": {
+        "prefix": "pre_tasks",
+        "body": "pre_tasks: \n  ",
+        "description": "use a pre_tasks"
+    },
+    "Tasks": {
+        "prefix": "tasks",
+        "body": "tasks: \n  ",
+        "description": "tasks"
+    },
+    "Post Tasks": {
+        "prefix": "post_tasks",
+        "body": "post_tasks: \n  ",
+        "description": "post_tasks"
+    },
+    "Timeout": {
+        "prefix": "timeout",
+        "body": "timeout: ${1|0,300,500,700,1000|}",
+        "description": "timeout in s"
+    },
+    "Vars": {
+        "prefix": "vars",
+        "body": "vars:\n  - ",
+        "description": "vars"
+    },
+    "Vars file": {
+        "prefix": "vars_file",
+        "body": "vars_file:\n  - ",
+        "description": ""
+    },
+    "Delegate to": {
+        "prefix": "delegate_to",
+        "body": "delegate_to: ${1|localhost,127.0.1.1|}",
+        "description": "delegate the tasks to specific machine"
+    },
+    "Delegate Facts": {
+        "prefix": "delegate_facts",
+        "body": "delegate_facts: ",
+        "description": "Boolean that allows you to apply facts to a delegated host instead of inventory_hostname"
+    },
+    "Tags": {
+        "prefix": "tags",
+        "body": "tags:\n- ",
+        "description": "Tags applied to the task or included tasks, this allows selecting subsets of tasks from the command line."
+    },
+    "when": {
+        "prefix": "when",
+        "body": "when: ",
+        "description": "Conditional expression, determines if an iteration of a task is run or not."
+    },
+    "Debugger":{
+        "prefix":"debugger",
+        "body":"debugger: ${1|always,never,one_failed,on_unreachable,on_skipped|}",
+        "description":"debugger of the task",
+    },
+    "Until":{
+        "prefix":"until",
+        "body":"until: ${1}\nretries: ${2|5,10,20,30|}\ndelay: ${3|10,20,30|}",
+        "description":"Conditional expression"
+    },
+    "Failed When":{
+        "prefix":"failed_when",
+        "body":"failed_when: ",
+        "description":"Conditional expression"
+    },
+    "Register":{
+        "prefix":"register",
+        "body":"register: ",
+        "description":"saved result in varibale",
+    },
+    "With Items":{
+        "prefix":"with_items",
+        "body":"with_items:\n  - ",
+        "description":"loop"
+    }
+}
