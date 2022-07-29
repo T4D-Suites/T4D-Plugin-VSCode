@@ -4,7 +4,7 @@
 	"description": "auto-completion shell script  and ansible for t4d",
 	"version": "0.3.0",
 	"publisher": "vincentc-afk",
-	"icon": "https://raw.githubusercontent.com/T4D-Suites/T4D-Ressources/master/Logo.png",
+	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.9.1"
 	},
