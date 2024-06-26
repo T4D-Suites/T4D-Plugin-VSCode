@@ -44,15 +44,30 @@
         "body": "case \"${1:VAR}\" in \n\t*) \n\t\t _t4dDebugLog  \\$perror \"Empty or Unknown argument\" \n\t\treturn \\$_t4dErrorCode\n\t;;\nesac\n",
         "description": "switch case"
     },
+    "loop_menu" : {
+        "prefix": "loop_menu",
+        "body": [
+            "while [[ \"$@\" != \"\" ]]; do",
+            "    case \"$1\" in",
+            "        *)",
+            "            _t4dDebugLog $perror \"Empty or Unknown argument < $1 >\"",
+            "            return $_t4dErrorCode",
+            "        ;;",
+            "    esac",
+            "    shift",
+            "done"
+        ],
+        "description": "menu case"
+    },
     "chf" : {
         "prefix": "chf",
         "body": [
-            "_${1:name}(){",
+            "${1:name}(){",
             "# Generated From $Tools4Dev_PATH/Engine/G4d/templates-project.env",
             "# v1.8.0",
-            "###### _${1:name}",
+            "###### ${1:name}",
             "#   - Name:",
-            "#       _${1:name}",
+            "#       ${1:name}",
             "###",
             "#   - Synopsis:",
             "#       ${2:description}",
@@ -70,7 +85,7 @@
             "###############################",
             "}"
         ],
-        "description": "switch case"
+        "description": "function"
     }
         
 }
