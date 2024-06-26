@@ -47,12 +47,12 @@
     "loop_menu" : {
         "prefix": "loop_menu",
         "body": [
-            "while [[ \"\$@\" != \"\" ]]; do",
-            "    case \"\$1\" in",
+            "while [[ \"\\$@\" != \"\" ]]; do",
+            "    case \"\\$1\" in",
             "        ${1}",
             "        *)",
-            "            _t4dDebugLog \$perror \"Empty or Unknown argument < \$1 >\"",
-            "            return \$_t4dErrorCode",
+            "            _t4dDebugLog \\$perror \"Empty or Unknown argument < \\$1 >\"",
+            "            return \\$_t4dErrorCode",
             "        ;;",
             "    esac",
             "    shift",
