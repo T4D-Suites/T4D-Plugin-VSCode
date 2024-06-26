@@ -13,6 +13,11 @@ This extension adds shell-style t4d auto-completion to VSCode.
 - for/while
 - case expr
 
+# Publish 
+    `npm install -g @vscode/vsce`
+    `vsce package`
+    `vsce publish`
+
 # Declaration
 
 This project refers to two other projects:
