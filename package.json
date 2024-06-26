@@ -2,6 +2,7 @@
 	"name": "auto-completion-t4d-shell-ansible",
 	"displayName": "auto-completion shell-ansible",
 	"description": "auto-completion shell script  and ansible for t4d",
+	"repository": "https://github.com/T4D-Suites/Tools4Dev",
 	"version": "0.5.0",
 	"publisher": "vincentc-afk",
 	"icon": "images/logo.png",
